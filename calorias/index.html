@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Calculadora de TMB</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+<nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" class="brand-logo"> <img src="best.png"  width="49%" height="20%"></a>
+      <ul class="right hide-on-med-and-down">
+        <li>Calculadora de TMB</li>
+      </ul>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Best Health</h1>
+      <div class="row center">
+        <h5 class="header col s12 light"> Calcule suas calorias de forma correta </h5>
+      </div> <br>
+      <div class="row center">
+          <div class="input-field col s3">
+            <input name="peso" id="peso" type="number" class="validate">
+            <label class="active" for="peso">Peso em Kg</label>
+          </div> 
+          <div class="input-field col s3">
+            <input name="altura" id="altura" type="number" class="validate">
+            <label class="active" for="altura">Altura em Cm</label>
+          </div>
+          <div class="input-field col s3">
+            <input name="idade" id="idade" type="number" class="validate">
+            <label class="active" for="idade">idade</label>
+          </div>
+          <div class="input-field col s3">
+            <input name="sexo" id="sexo" type="text" class="validate">
+            <label class="active" for="sexo"><b>Sexo</b> M ou F</label>
+          </div>
+
+          <select id="select" class="browser-default">
+            <option value="" disabled selected>Nivel de atividade fisica</option>
+            <option value="leve">Leve</option>
+            <option value="moderada">Moderada</option>
+            <option value="intensa">Intensa</option>
+          </select>
+        
+
+          <div class="input-field col s2">
+            <a class="waves-effect waves-light btn-small" style="background-color:#03a9f4" onclick="calcular()">Calcular</a>
+          </div>
+      </div>
+      <h1 name="resultado" id="resultado"></h1>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">flash_on</i></h2>
+            <h5 class="center">Como acelerar seu metabolismo</h5>
+
+            <p class="light"><b>Beber água</b>
+              Ao entrar no organismo, a água precisa ser ajustada para a temperatura do corpo. O organismo gasta energia para fazer equilíbrio térmico. “Além disso, beber água cerca de uma hora antes das refeições faz com que coma menos”, dizem os especialistas.
+            </p>
+            <p class="light">
+              <b>Fazer treino intervalado</b>
+              O treino intervalado é um método de treino que consiste em alternar o exercício entre intensidades muito altas (até 90% da frequência cardíaca máxima) e baixas a médias (não ultrapassando 70% da frequência cardíaca máxima), durante 30 minutos, no máximo. Esse treino faz com que o corpo continue a queimar calorias até uma hora depois da atividade, o que eleva o metabolismo e favorece o emagrecimento.
+            
+            </p>
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">book</i></h2>
+            <h5 class="center">O que e TMB</h5>
+
+            <p class="light"><b> A Taxa Metabólica Basal (TMB)</b>
+              é o mínimo de energia necessária para manter as funções do organismo em repouso, como os batimentos cardíacos, a pressão arterial, a respiração e a manutenção da temperatura corporal.
+            </p>
+    
+          </div>
+        </div>
+
+        <div class="col s12 m4">
+          <div class="icon-block">
+            <h2 class="center light-blue-text"><i class="material-icons">settings</i></h2>
+            <h5 class="center">Dicas para ganhar massa muscular mais rápido</h5>
+
+            <p class="light"><b>Fazer cada exercício de forma lenta</b>
+              Os exercícios de musculação devem ser realizados de forma lenta, principalmente na fase de contração do músculo, isso porque ao realizar esse tipo de movimentação mais fibras vão sendo lesionadas durante a atividade e mais efetivo será o ganho de massa muscular durante o período de recuperação muscular.
+            </p>
+            <p class="light">
+              <b>Ter uma alimentação rica em proteínas</b>
+              Para ganhar massa muscular, é importante que a pessoa tenha uma alimentação saudável e rica em proteínas, já que são responsáveis pela manutenção das fibras musculares e, consequentemente, estão diretamente relacionadas com a hipertrofia. Além de aumentar o consumo de proteínas, é importante também consumir gorduras boas e consumir mais calorias do que se gasta
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <br><br>
+  </div>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s6">
+          <h5 class="white-text">Best Health</h5>
+          <p class="grey-text text-lighten-4">Somos uma equipe preparada para ajudar você a ter uma saúde melhor.</p>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      <a class="orange-text text-lighten-3"> &copy;</a>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
